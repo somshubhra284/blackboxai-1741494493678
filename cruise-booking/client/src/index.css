@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+    placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 
+    focus:border-primary-500;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 text-white bg-primary-600 rounded-md hover:bg-primary-700 
+    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 
+    disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 text-primary-600 bg-white border border-primary-600 rounded-md 
+    hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 
+    focus:ring-primary-500 disabled:opacity-50 disabled:cursor-not-allowed 
+    transition-colors duration-200;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 
+    disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200;
+  }
+}
+
+:root {
+  --primary-50: #f0f9ff;
+  --primary-100: #e0f2fe;
+  --primary-200: #bae6fd;
+  --primary-300: #7dd3fc;
+  --primary-400: #38bdf8;
+  --primary-500: #0ea5e9;
+  --primary-600: #0284c7;
+  --primary-700: #0369a1;
+  --primary-800: #075985;
+  --primary-900: #0c4a6e;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-400);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-500);
+}
+
+/* Base styles */
+body {
+  @apply text-gray-900 bg-gray-50;
+}
+
+/* Form styles */
+form label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+form input[type="checkbox"] {
+  @apply h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded 
+  cursor-pointer;
+}
+
+/* Link styles */
+a {
+  @apply text-primary-600 hover:text-primary-700 transition-colors duration-200;
+}
+
+/* Container styles */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+/* Animation utilities */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
